@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@theme {
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --color-ink: #050505;
+  --color-night: #0d0b16;
+  --color-violet: #8b5cf6;
+  --color-magenta: #ec4899;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body { background: #050505; color: #f5f3ff; overflow-x: hidden; }
+.glass { background: rgba(255,255,255,.04); backdrop-filter: blur(14px); border: 1px solid rgba(167,139,250,.16); }
+.glow-hover { transition: transform .3s, border-color .3s, box-shadow .3s; }
+.glow-hover:hover { transform: translateY(-6px); border-color: rgba(167,139,250,.6); box-shadow: 0 0 32px -6px rgba(139,92,246,.55); }
+.grad-text { background: linear-gradient(90deg,#8b5cf6,#c026d3,#ec4899); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.btn-primary { background: linear-gradient(90deg,#7c3aed,#c026d3); box-shadow: 0 0 0 0 rgba(192,38,211,0); transition: box-shadow .3s, transform .2s; }
+.btn-primary:hover { box-shadow: 0 0 28px 0 rgba(192,38,211,.5); transform: translateY(-2px); }
+:focus-visible { outline: 2px solid #c4b5fd; outline-offset: 3px; border-radius: 6px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation: none !important; transition-duration: .01ms !important; } }
